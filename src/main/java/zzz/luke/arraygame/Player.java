@@ -13,11 +13,11 @@ public abstract class Player {
     private Integer score=0;
     private Game game;
 
-    public void win(){
+    public final void win(){
         score++;
     }
 
-    public void setGame(Game game) {
+    public final void setGame(Game game) {
         this.game = game;
     }
 
@@ -41,19 +41,19 @@ public abstract class Player {
         return name;
     }
 
-    public int getTotal() {
+    public final int getTotal() {
         return selectedNums.stream().reduce((x, y) -> x + y).get();
     }
 
-    public Integer getLeftNum(){
+    public final Integer getLeftNum(){
         return getList().get(0);
     }
 
-    public Integer getRightNum(){
+    public final Integer getRightNum(){
         return getList().get(game.getNums().size()-1);
     }
 
-    public List<Integer> getList() {
+    public final List<Integer> getList() {
         return game.getNums();
     }
 
@@ -62,7 +62,7 @@ public abstract class Player {
     abstract public Move nextMove();
 
 
-    public Integer getScore() {
+    public final Integer getScore() {
         return score;
     }
 }
