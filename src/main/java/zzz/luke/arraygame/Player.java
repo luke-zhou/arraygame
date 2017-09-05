@@ -29,6 +29,10 @@ public abstract class Player {
         selectedNums.add(num);
     }
 
+    public final void reset(){
+        selectedNums.clear();
+    }
+
     public final List<Integer> getSelectedNums() {
         return selectedNums;
     }

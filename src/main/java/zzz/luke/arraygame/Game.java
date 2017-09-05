@@ -14,7 +14,7 @@ public class Game {
 
     private static int MAX_SIZE = 50;
     private static int MIN_SIZE = 20;
-    private static int MAX_NUM = 100;
+    private static int MAX_NUM = 1000;
 
     private List<Integer> nums;
     private Player player1;
@@ -28,7 +28,7 @@ public class Game {
     }
 
     public Player start() {
-        //displayNums("Array", nums);
+//        displayNums("Array", nums);
         while (nums.size() > 0) {
             switch (nextPlayer.nextMove()) {
                 case LEFT:
@@ -68,12 +68,14 @@ public class Game {
     }
 
     public void setFirstPlayer(Player player) {
+        player.reset();
         this.player1 = player;
         player1.setGame(this);
         nextPlayer = player1;
     }
 
     public void setSecondPlayer(Player player) {
+        player.reset();
         this.player2 = player;
         player2.setGame(this);
     }
