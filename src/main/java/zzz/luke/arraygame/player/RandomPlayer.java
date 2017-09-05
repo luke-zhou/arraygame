@@ -17,8 +17,7 @@ public class RandomPlayer extends Player {
     @Override
     public Move nextMove() {
         int num = NumberGenUtil.randomGenerateNumber(0, 10);
-        if (num ==0) return Move.SKIP;
-        else if (num % 2 == 0) {
+        if (num % 2 == 0) {
             return Move.LEFT;
         } else {
             return Move.RIGHT;

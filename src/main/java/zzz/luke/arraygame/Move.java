@@ -5,6 +5,5 @@ package zzz.luke.arraygame;
  */
 public enum Move {
     LEFT,
-    RIGHT,
-    SKIP
+    RIGHT
 }

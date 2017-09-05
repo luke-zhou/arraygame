@@ -39,8 +39,6 @@ public class Game {
                     Integer right = nums.remove(nums.size() - 1);
                     nextPlayer.addNum(right);
                     break;
-                case SKIP:
-                    break;
             }
             swapNextPlayer();
         }
